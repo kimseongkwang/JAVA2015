@@ -12,12 +12,10 @@ public class CLoginView {
 		
 		//input from keybord using scanner
 		CMember member = new CMember();
-		System.out.printf("사용자 아이디를 입력 하세요: ");
-//		String userId = scanner.next();
+	//		String userId = scanner.next();
 		member.setUserID("userId");
 		
-		System.out.printf("비밀번호를 입력 하세요: ");
-//		String password = scanner.next();
+	//		String password = scanner.next();
 		member.setPassword("password");
 		
 		//closs scanner

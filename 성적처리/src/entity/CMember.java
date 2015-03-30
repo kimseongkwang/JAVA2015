@@ -1,9 +1,15 @@
 package entity;
 
+import java.io.Serializable;
+
 import control.CLoginControl;
 
 //Entity class or value class
-public class CMember {
+public class CMember implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String userID, password;//속성  attributes
 	private CLoginControl loginControl;
 	//속성을 퍼블릭으로 놓지 않는다.
