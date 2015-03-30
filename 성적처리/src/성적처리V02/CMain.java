@@ -32,6 +32,7 @@ public class CMain {
 		DAO gwamokDAO = new DAO();
 		gwamokDAO.write(gwamok, "gwamok");
 		gwamok = (CGwamok) gwamokDAO.read("gwamok");
+		// dk 
 		//entity object 화면과 컨트롤이 필요 , 전체 멤버를 과리할 DAO가 존재
 		
 		// 강좌개설
