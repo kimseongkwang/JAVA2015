@@ -4,12 +4,15 @@ import DAO.DAO;
 import view.CGangjwaView;
 import view.CGwamokView;
 import view.CLoginView;
+import view.CSugangView;
 import control.CGangjwaControl;
 import control.CGwamokControl;
 import control.CLoginControl;
+import control.CSugangControl;
 import entity.CGangjwa;
 import entity.CGwamok;
 import entity.CMember;
+import entity.CSugang;
 
 public class CMain {
 	
@@ -32,7 +35,6 @@ public class CMain {
 		DAO gwamokDAO = new DAO();
 		gwamokDAO.write(gwamok, "gwamok");
 		gwamok = (CGwamok) gwamokDAO.read("gwamok");
-		// dk 
 		//entity object 화면과 컨트롤이 필요 , 전체 멤버를 과리할 DAO가 존재
 		
 		// 강좌개설
@@ -43,6 +45,15 @@ public class CMain {
 		DAO gangjwaDAO = new DAO();
 		gangjwaDAO.write(gangjwa, "gangjwa");
 		gangjwa = (CGangjwa) gangjwaDAO.read("gangjwa");
+		
+		//수강신청
+		CSugangView sugangview = new CSugangView();
+		CSugang sugang = sugangview.shinchung();
+		CSugangControl sugangControl = new CSugangControl();
+		sugang = sugangControl.shinchung(sugang);
+		DAO sugangDAO = new DAO();
+		sugangDAO.write(sugang, "sugang");
+		sugang = (CSugang) sugangDAO.read("sugang");
 	}
 
 }

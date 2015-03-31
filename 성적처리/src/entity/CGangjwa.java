@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Vector;
 
 public class CGangjwa implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//attributes
 	private int ID;
 	private String name;
