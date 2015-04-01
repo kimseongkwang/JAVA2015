@@ -1,6 +1,8 @@
 package 성적처리V02;
 
 import DAO.DAO;
+import DAO.IDAO;
+import DAO.ObjectDAO;
 import view.CGangjwaView;
 import view.CGwamokView;
 import view.CLoginView;
@@ -23,7 +25,7 @@ public class CMain {
 		CMember member = loginView.login();
 		CLoginControl loginControl = new CLoginControl();
 		member = loginControl.login(member);
-		DAO memberDAO = new DAO();
+		IDAO memberDAO = new ObjectDAO();
 		memberDAO.write(member, "member");
 		member = (CMember) memberDAO.read("member");
 		// 과목개설
@@ -32,7 +34,7 @@ public class CMain {
 		CGwamok gwamok = gwamokview.getGwamok();
 		CGwamokControl gwamokControl = new CGwamokControl();
 		gwamok = gwamokControl.processGwamok(gwamok);
-		DAO gwamokDAO = new DAO();
+		IDAO gwamokDAO = new ObjectDAO();
 		gwamokDAO.write(gwamok, "gwamok");
 		gwamok = (CGwamok) gwamokDAO.read("gwamok");
 		//entity object 화면과 컨트롤이 필요 , 전체 멤버를 과리할 DAO가 존재
@@ -42,7 +44,7 @@ public class CMain {
 		CGangjwa gangjwa = gangjwaview.getGangjwa();
 		CGangjwaControl gangjwaControl = new CGangjwaControl();
 		gangjwa = gangjwaControl.processGangjwa(gangjwa);
-		DAO gangjwaDAO = new DAO();
+		IDAO gangjwaDAO = new ObjectDAO();
 		gangjwaDAO.write(gangjwa, "gangjwa");
 		gangjwa = (CGangjwa) gangjwaDAO.read("gangjwa");
 		
@@ -51,7 +53,7 @@ public class CMain {
 		CSugang sugang = sugangview.shinchung();
 		CSugangControl sugangControl = new CSugangControl();
 		sugang = sugangControl.shinchung(sugang);
-		DAO sugangDAO = new DAO();
+		IDAO sugangDAO = new ObjectDAO();
 		sugangDAO.write(sugang, "sugang");
 		sugang = (CSugang) sugangDAO.read("sugang");
 	}
