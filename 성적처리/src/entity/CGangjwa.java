@@ -1,6 +1,5 @@
 package entity;
 
-import java.io.Serializable;
 import java.util.Vector;
 
 public class CGangjwa extends CEntity {
@@ -30,7 +29,7 @@ public class CGangjwa extends CEntity {
 	public void setGwamokID(int gwamokID) {		this.gwamokID = gwamokID;	}
 	@Override
 	void read() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub............
 		
 	}
 	@Override

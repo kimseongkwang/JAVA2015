@@ -1,8 +1,6 @@
 package entity;
 
-import java.io.Serializable;
-
-public class CGwamok implements Serializable {
+public class CGwamok extends CEntity {
 	
 	private static final long serialVersionUID = 1L;
 	//attributes
@@ -17,6 +15,16 @@ public class CGwamok implements Serializable {
 	public void setName(String name) {this.name = name;}
 	public int getHakjeom() {return hakjeom;}
 	public void setHakjeom(int hakjeom) {this.hakjeom = hakjeom;}
+	@Override
+	void read() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	void write() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
