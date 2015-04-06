@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.Scanner;
 import java.util.Vector;
 
 public class CGangjwa extends CEntity {
@@ -28,12 +29,12 @@ public class CGangjwa extends CEntity {
 	public int getGwamokID() {	return gwamokID;}
 	public void setGwamokID(int gwamokID) {		this.gwamokID = gwamokID;	}
 	@Override
-	void read() {
+	public void read(Scanner scanner) {
 		// TODO Auto-generated method stub............
 		
 	}
 	@Override
-	void write() {
+	public void write() {
 		// TODO Auto-generated method stub
 		
 	}

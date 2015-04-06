@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Scanner;
+
 public class CGwamok extends CEntity {
 	
 	private static final long serialVersionUID = 1L;
@@ -16,12 +18,12 @@ public class CGwamok extends CEntity {
 	public int getHakjeom() {return hakjeom;}
 	public void setHakjeom(int hakjeom) {this.hakjeom = hakjeom;}
 	@Override
-	void read() {
+	public void read(Scanner scanner) {
 		// TODO Auto-generated method stub
 		
 	}
 	@Override
-	void write() {
+	public void write() {
 		// TODO Auto-generated method stub
 		
 	}

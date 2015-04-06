@@ -11,18 +11,13 @@ import entity.CEntity;
 public class TextDAO implements IDAO {
 
 	
-	public Object read(Class clazz, String filename) {
+	public Object read(CEntity entity, String filename) {
 	
 		try {
 			Scanner scanner = new Scanner(new File(filename));
-			CEntity entity = (CEntity) clazz.newInstance();
 			entity.read(scanner);
 			return entity;
-		}catch (InstantiationException | IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			
-		} catch (FileNotFoundException e) {
+		}catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
