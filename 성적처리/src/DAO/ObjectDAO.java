@@ -11,7 +11,7 @@ import entity.CEntity;
 
 public class ObjectDAO implements IDAO {
 	
-	public Object read(CEntity entity, String filename){
+	public CEntity read(CEntity entity, String filename){
 		
 		Object object = null;
 		try {
@@ -26,7 +26,7 @@ public class ObjectDAO implements IDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return object;
+		return (CEntity) object;
 		
 	}
 	

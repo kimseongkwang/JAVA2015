@@ -18,16 +18,15 @@ public class CMain {
 	public static void main(String[] args) {
 	
 		//login
+		//create object
 		CLoginView 	loginView = new CLoginView();	
-		CMember member = loginView.login();
 		CLoginControl loginControl = new CLoginControl();
-		member = loginControl.login(member);
-		IDAO memberDAO = new TextDAO();
-	//	memberDAO.write(member, "member");
-	//	CMember member = new CMember();
-		member = (CMember) memberDAO.read(member, "member.txt");
-	
-		
+		IDAO dao = new TextDAO();
+		//associates
+		loginView.setControl(loginControl);
+		loginControl.setDao(dao);
+		//start login
+		loginView.login();
 	}
  
 }

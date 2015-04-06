@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 import entity.CMember;
 
-public class CLoginView {
+public class CLoginView extends CView {
 
-	public CMember login() {
+	public void login() {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		
@@ -20,7 +20,8 @@ public class CLoginView {
 		
 		//closs scanner
 		scanner.close();
-		return member;
+		member= (CMember) this.getControl().process(member);
+
 	}
 	
 }

@@ -11,7 +11,7 @@ import entity.CEntity;
 public class TextDAO implements IDAO {
 
 	
-	public Object read(CEntity entity, String filename) {
+	public CEntity read(CEntity entity, String filename) {
 	
 		try {
 			Scanner scanner = new Scanner(new File(filename));
