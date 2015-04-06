@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 public class ObjectDAO implements IDAO {
 	
-	public Object read(String filename){
+	public Object read(Class clazz, String filename){
 		
 		Object object = null;
 		try {

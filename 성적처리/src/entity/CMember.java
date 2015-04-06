@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Scanner;
+
 //Entity class or value class
 public class CMember extends CEntity {
 	/**
@@ -16,12 +18,13 @@ public class CMember extends CEntity {
 	public String getUserID() {return userID;}
 	public String getPassword() {return password;}
 	@Override
-	void read() {
+	public void read(Scanner scanner) {
 		// TODO Auto-generated method stub
-		
-	}
+		userID = scanner.next();
+		password = scanner.next();
+	};
 	@Override
-	void write() {
+	public void write() {
 		// TODO Auto-generated method stub
 		
 	}
