@@ -11,7 +11,7 @@ import control.CGwamokControl;
 import control.CLoginControl;
 import entity.CGangjwa;
 import entity.CGwamok;
-import entity.CMember;
+import entity.CLoginInfo;
 
 public class CMain {
 	

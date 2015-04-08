@@ -3,15 +3,20 @@ package entity;
 import java.util.Scanner;
 
 //Entity class or value class
-public class CMember extends CEntity {
+public class CLoginInfo extends CEntity {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String userID, password;//속성  attributes
-	//속성을 퍼블릭으로 놓지 않는다.
 	
+	public static enum ELoginResult{ sucess, idError, passwordError, error};
+	private ELoginResult eLoginResult;
+	
+	private String userID, password;//속성  attributes
 
+	
+	public ELoginResult geteLoginResult() {	return eLoginResult;	}
+	public void seteLoginResult(ELoginResult eLoginResult) {this.eLoginResult = eLoginResult;}
 	public void setUserID(String userID) {this.userID = userID;}//데이ㅌㅏ를 읽어오거나, 해당위치의 값을 쓴다.
 	public void setPassword(String password) {this.password = password;}
 

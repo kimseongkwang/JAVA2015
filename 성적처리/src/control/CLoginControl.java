@@ -1,15 +1,31 @@
 package control;
 
-import entity.CMember;
+import java.io.FileNotFoundException;
+
+import entity.CLoginInfo;
+import entity.CLoginInfo.ELoginResult;
 
 public class CLoginControl extends CControl {
-	private CMember member;
 	
-	public CMember login(CMember member) {
+	
+	public CLoginInfo login(CLoginInfo loginInfo) {
 		// TODO Auto-generated method stub
+		try {
+			CLoginInfo loginInfoDAO;
+			this.getDao().connect("member.txt");
+			while(..){
+				CLoginInfo loginInfoDAO = (CLoginInfo)this.getDao().read();
+				if (loginInfoDAO.getUserID()==loginInfo.getUserID()){
+					if(loginInfoDAO.getPassword() == loginInfo.getPassword())
+						loginInfo.seteLoginResult(ELoginResult.sucess);
+				}
+				this.getDao().disconnect();
+			catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return loginInfo;
 		
-		this.member = member;//포인터인데 점
-		return this.member;
-	}
-
 }
+	
