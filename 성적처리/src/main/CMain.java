@@ -1,4 +1,4 @@
-package 己利贸府V02;
+package main;
 
 import DAO.IDAO;
 import DAO.ObjectDAO;
