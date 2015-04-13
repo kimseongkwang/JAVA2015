@@ -34,7 +34,7 @@ public class CGangjwa extends CEntity {
 		
 	}
 	@Override
-	public void write() {
+	public void write(Scanner scanner) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -2,30 +2,41 @@ package control;
 
 import java.io.FileNotFoundException;
 
-import entity.CLoginInfo;
-import entity.CLoginInfo.ELoginResult;
+import entity.CUser;
+import entity.VLogin;
+import entity.VUser;
+import entity.VUser.ELoginResult;
 
 public class CLoginControl extends CControl {
-	
-	
-	public CLoginInfo login(CLoginInfo loginInfo) {
+	public VUser login(VLogin vLogin) {
 		// TODO Auto-generated method stub
+		VUser vUser = new VUser();
+		CUser user = new CUser();
 		try {
-			CLoginInfo loginInfoDAO;
 			this.getDao().connect("member.txt");
-			while(..){
-				CLoginInfo loginInfoDAO = (CLoginInfo)this.getDao().read();
-				if (loginInfoDAO.getUserID()==loginInfo.getUserID()){
-					if(loginInfoDAO.getPassword() == loginInfo.getPassword())
-						loginInfo.seteLoginResult(ELoginResult.sucess);
+			while(this.getDao().hasNext()){
+				user = (CUser)this.getDao().read(user);
+				if (user.getUserID().equals(vLogin.getUserID())){
+					if(user.getPassword().equals(vLogin.getPassword())){
+						vUser.seteLoginResult(ELoginResult.sucess);
+						vUser.setName(user.getName());
+						vUser.setUserID(user.getUserID());
+				}else{
+					vUser.seteLoginResult(ELoginResult.passwordError);
+					}
+					this.getDao().disconnect();
+					return vUser;
 				}
-				this.getDao().disconnect();
-			catch (FileNotFoundException e) {
+			}
+			this.getDao().disconnect();
+			vUser.seteLoginResult(ELoginResult.idError);
+			return vUser;
+		}catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			
-		return loginInfo;
-		
-}
 	
+			vUser.seteLoginResult(ELoginResult.fileNotFound);
+		}
+	return vUser;
+		
+	}
+}	

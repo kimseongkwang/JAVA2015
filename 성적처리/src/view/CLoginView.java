@@ -3,7 +3,8 @@ package view;
 import java.util.Scanner;
 
 import control.CLoginControl;
-import entity.CLoginInfo;
+import entity.VLogin;
+import entity.VUser;
 
 public class CLoginView extends CView {
 
@@ -12,16 +13,19 @@ public class CLoginView extends CView {
 		Scanner scanner = new Scanner(System.in);
 		
 		//input from keybord using scanner
-		CLoginInfo member = new CLoginInfo();
+		VLogin vLogin = new VLogin();
 	//		String userId = scanner.next();
-		member.setUserID("userId");
+		vLogin.setUserID("id5");
 		
 	//		String password = scanner.next();
-		member.setPassword("password");
+		vLogin.setPassword("pw5");
 		
 		//closs scanner
-		member= (CLoginInfo) ((CLoginControl)this.getControl()).login(member);
+		VUser vUser = (VUser) 
+				((CLoginControl)this.getControl()).login(vLogin);
+		System.out.println("login result: "+vUser.geteLoginResult().toString());
 		scanner.close();
+		
 	}
 	
 }
