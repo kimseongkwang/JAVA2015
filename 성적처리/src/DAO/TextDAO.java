@@ -11,9 +11,13 @@ import entity.CEntity;
 public class TextDAO implements IDAO {
 	private Scanner scanner;
 	
-	public CEntity read(CEntity	entity) {
+	public CEntity read(CEntity	entity, String ID) {
+		while(scanner.hasNext()){
 		entity.read(scanner);
-		return entity;
+		if(entity.getID().equals(ID))
+			return entity;
+		}
+		return null;
 	}
 	public void write(CEntity entity) {
 		entity.write(scanner);

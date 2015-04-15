@@ -18,7 +18,7 @@ public class CLoginView extends CView {
 		vLogin.setUserID("id5");
 		
 	//		String password = scanner.next();
-		vLogin.setPassword("pw5");
+		vLogin.setPassword("pw4");
 		
 		//closs scanner
 		VUser vUser = (VUser) 

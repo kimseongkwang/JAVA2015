@@ -6,7 +6,7 @@ import entity.CEntity;
 
 public interface IDAO {
 	public void connect(String name) throws FileNotFoundException;
-	public CEntity read(CEntity entity);
+	public CEntity read(CEntity entity, String ID);
 	public void write(CEntity entity);
 	public void disconnect();
 	public boolean hasNext();
