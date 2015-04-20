@@ -1,12 +1,12 @@
-package entity;
+/*package entity;
 
 import java.util.Scanner;
 import java.util.Vector;
 
 public class CGangjwa extends CEntity {
-	/**
+	*//**
 	 * 
-	 */
+	 *//*
 	private static final long serialVersionUID = 1L;
 	//attributes
 	private int ID;
@@ -41,3 +41,4 @@ public class CGangjwa extends CEntity {
 
 
 }
+*/

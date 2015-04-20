@@ -3,7 +3,7 @@ package entity;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class CEntity implements Serializable {
+abstract public class CEntity implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	protected String ID;
@@ -11,8 +11,7 @@ public class CEntity implements Serializable {
 	public String getID() {return ID;}
 	public void setID(String ID) {this.ID = ID;}
 	
-	public void read(Scanner scanner){};
-	public void write(Scanner scanner){};
+	abstract public void read(Scanner scanner);
+	abstract public void write(Scanner scanner);
 	
 }
-

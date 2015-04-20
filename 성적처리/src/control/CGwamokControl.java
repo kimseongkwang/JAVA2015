@@ -1,4 +1,4 @@
-package control;
+/*package control;
 
 import entity.CGwamok;
 
@@ -10,3 +10,4 @@ public class CGwamokControl {
 	}
 
 }
+*/

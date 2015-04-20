@@ -1,6 +1,5 @@
 package control;
 
-import entity.CEntity;
 import DAO.IDAO;
 
 public class CControl {

@@ -1,4 +1,4 @@
-package view;
+/*package view;
 
 import entity.CGangjwa;
 
@@ -15,3 +15,4 @@ public class CGangjwaView {
 	}
 
 }
+*/

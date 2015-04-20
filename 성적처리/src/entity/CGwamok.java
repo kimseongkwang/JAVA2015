@@ -1,4 +1,4 @@
-package entity;
+/*package entity;
 
 import java.util.Scanner;
 
@@ -30,3 +30,4 @@ public class CGwamok extends CEntity {
 	
 	
 }
+*/
