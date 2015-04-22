@@ -1,31 +1,36 @@
 package main;
 
-import java.io.FileNotFoundException;
-
 import DAO.IDAO;
 import DAO.TextDAO;
-import view.CExceptionView;
 import view.CLoginView;
+import view.CSugangView;
 import control.CLoginControl;
-import exception.PasswordNotMatchException;
-import exception.UserIDNotFoundException;
+import control.CSugangControl;
+import entity.VUser;
+import view.CExceptionView;
 
 public class CMain {
 	
 	public static void main(String[] args) {
-		try {//login
-			//create object
-			//view
+		try {
+			//components
 			CLoginView 	loginView = new CLoginView();	
-			//control
 			CLoginControl loginControl = new CLoginControl();
-			//dao
 			IDAO dao = new TextDAO();
 			//associates
 			loginView.setControl(loginControl);
 			loginControl.setDao(dao);
 			//start program
-			loginView.login();
+			VUser vUser = loginView.login();
+
+			//compotnents
+			CSugangView sugangView = new CSugangView();
+			CSugangControl sugangControl = new CSugangControl();
+			//associates
+			sugangView.setControl(sugangControl);
+			sugangControl.setDao(dao);
+			//start
+			sugangView.sugangSincheong(vUser);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			CExceptionView.processException(e);

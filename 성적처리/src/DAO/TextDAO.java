@@ -3,6 +3,7 @@ package DAO;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Vector;
 
 import entity.CEntity;
 
@@ -34,8 +35,8 @@ public class TextDAO implements IDAO {
 		this.scanner.close();
 	}
 	@Override
-	public boolean hasNext() {
+	public Vector<control.CEntity> readAll() {
 		// TODO Auto-generated method stub
-		return this.scanner.hasNext();
+		return null;
 	}
 }
