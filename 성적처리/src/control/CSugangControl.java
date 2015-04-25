@@ -1,5 +1,6 @@
 package control;
 
+import java.io.FileNotFoundException;
 import java.util.Vector;
 
 import DAO.IDAO;
@@ -9,7 +10,7 @@ import entity.CUser;
 
 public class CSugangControl extends CControl{
 
-	public Vector<CGangjwa> getGangjwaList() {
+	public Vector<CGangjwa> getGangjwaList() throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		//real entity list
 		this.getDao().connect("gnagjwa.txt");

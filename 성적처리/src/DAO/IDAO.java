@@ -8,7 +8,8 @@ import entity.CEntity;
 public interface IDAO {
 	public void connect(String name) throws FileNotFoundException;
 	public CEntity read(CEntity entity, String ID);
+	public Vector<CEntity> readAll();
 	public void write(CEntity entity);
 	public void disconnect();
-	public Vector<CControl.CEntity> readAll();
+	
 }

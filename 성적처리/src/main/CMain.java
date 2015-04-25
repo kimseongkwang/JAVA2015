@@ -13,17 +13,18 @@ public class CMain {
 	
 	public static void main(String[] args) {
 		try {
+			IDAO dao = new TextDAO();
 			//components
 			CLoginView 	loginView = new CLoginView();	
 			CLoginControl loginControl = new CLoginControl();
-			IDAO dao = new TextDAO();
+	
 			//associates
 			loginView.setControl(loginControl);
 			loginControl.setDao(dao);
 			//start program
 			VUser vUser = loginView.login();
 
-			//compotnents
+			//components
 			CSugangView sugangView = new CSugangView();
 			CSugangControl sugangControl = new CSugangControl();
 			//associates

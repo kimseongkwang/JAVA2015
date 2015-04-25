@@ -35,7 +35,7 @@ public class TextDAO implements IDAO {
 		this.scanner.close();
 	}
 	@Override
-	public Vector<control.CEntity> readAll() {
+	public Vector<CEntity> readAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
