@@ -1,5 +1,6 @@
 package entity;
 
+import java.io.BufferedWriter;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -12,6 +13,6 @@ abstract public class CEntity implements Serializable {
 	public void setID(String ID) {this.ID = ID;}
 	
 	abstract public void read(Scanner scanner);
-	abstract public void write(Scanner scanner);
+	abstract public void write(BufferedWriter scanner);
 	
 }

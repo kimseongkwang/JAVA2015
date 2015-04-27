@@ -1,10 +1,12 @@
 package view;
 
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 import java.util.Vector;
 
-import control.CSugangControl;
+import control.CGangjwaControl;
 import entity.CGangjwa;
+import entity.CSugang;
 import entity.VUser;
 
 
@@ -13,8 +15,20 @@ public class CSugangView extends CView {
 	public void sugangSincheong(VUser vUser) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		//show Gangjwa List
-		CSugangControl sugangControl = (CSugangControl)this.getControl();
-		Vector<CGangjwa> gangjwaList = sugangControl.getGangjwaList();
+		CGangjwaControl gangjwaControl = (CGangjwaControl)this.getControl();
+		Vector<CGangjwa> gangjwaList = gangjwaControl.getGangjwaList();
+		System.out.println("°­ÁÂ ID ÀÔ·ÂÇÏ¼¼¿ä");
+		for(CGangjwa gangjwa : gangjwaList ){
+			System.out.println("°­ÁÂ ID: "+gangjwa.getID()+gangjwa.getName());
+		}
+		Scanner scanner = new Scanner(System.in);
+		String gangjwaID = scanner.next();
+		for(CGangjwa gangjwa : gangjwaList){
+			if(gangjwa.getID().equals(gangjwaID)){
+				CSugang sugang = new CSugang(vUser.getUserID(), gangjwa.getID());
+				gangjwaControl.sugangSincheong(sugang);
+			}
+		}
 		//select Gangjwa
 		//confirm sugangSincheong
 		//show result

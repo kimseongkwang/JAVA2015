@@ -14,7 +14,8 @@ public class CGangjwa extends CEntity {
 	@Override
 	public void read(Scanner scanner) {
 		// TODO Auto-generated method stub
-		
+		ID = scanner.next();
+		name = scanner.next();
 
 	}
 

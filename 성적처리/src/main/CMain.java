@@ -4,8 +4,8 @@ import DAO.IDAO;
 import DAO.TextDAO;
 import view.CLoginView;
 import view.CSugangView;
+import control.CGangjwaControl;
 import control.CLoginControl;
-import control.CSugangControl;
 import entity.VUser;
 import view.CExceptionView;
 
@@ -26,7 +26,7 @@ public class CMain {
 
 			//components
 			CSugangView sugangView = new CSugangView();
-			CSugangControl sugangControl = new CSugangControl();
+			CGangjwaControl sugangControl = new CGangjwaControl();
 			//associates
 			sugangView.setControl(sugangControl);
 			sugangControl.setDao(dao);

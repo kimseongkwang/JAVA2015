@@ -29,8 +29,6 @@ public class CLoginView extends CView {
 				((CLoginControl)this.getControl()).login(vLogin);
 		System.out.println("login result: "+vUser.getName());
 		
-		//closs scanner
-		scanner.close();
 		return vUser;
 	}
 	
