@@ -17,6 +17,27 @@ public class TextDAO implements IDAO {
 	private BufferedWriter Writer;
 	private String mode;
 	
+		@Override
+		public void connect(String name, String mode) throws IOException {
+			// TODO Auto-generated method stub
+			this.mode = mode;
+			if(this.mode.equals("r")){
+				this.scanner = new Scanner(new File(name));
+			}else if(this.mode.equals("w")){
+				this.Writer = new BufferedWriter(new FileWriter(name, false));
+			}else if(this.mode.equals("w+")){
+				this.Writer = new BufferedWriter(new FileWriter(name, true));
+			}
+		}
+		@Override
+		public void disconnect() throws IOException {
+			// TODO Auto-generated method stub
+			if(this.mode.equals("r")){
+			this.scanner.close();
+			}else{
+				this.Writer.close();
+			}
+		}
 		public CEntity read(CEntity	entity, String ID) {
 			while(scanner.hasNext()){
 				entity.read(scanner);
@@ -28,27 +49,6 @@ public class TextDAO implements IDAO {
 		public void write(CEntity entity) {
 			entity.write(Writer);
 			
-		}
-		@Override
-		public void connect(String name, String mode) throws IOException {
-			// TODO Auto-generated method stub
-			this.mode = mode;
-			if(this.mode.equals("r")){
-				this.scanner = new Scanner(new File(name));
-			}else if(this.mode.equals("w")){
-				this.Writer = new BufferedWriter(new FileWriter(name, true));
-			}else if(this.mode.equals("w+")){
-				this.Writer = new BufferedWriter(new FileWriter(name, false));
-			}
-		}
-		@Override
-		public void disconnect() throws IOException {
-			// TODO Auto-generated method stub
-			if(this.mode.equals("r")){
-			this.scanner.close();
-			}else{
-				this.Writer.close();
-			}
 		}
 		@Override
 		public CEntity readNext(CEntity entity) {

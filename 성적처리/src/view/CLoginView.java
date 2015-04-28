@@ -1,6 +1,7 @@
 package view;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 import control.CLoginControl;
@@ -12,9 +13,8 @@ import exception.UserIDNotFoundException;
 public class CLoginView extends CView {
 
 	public VUser login()
-			throws FileNotFoundException,
-			UserIDNotFoundException,
-			PasswordNotMatchException{
+			throws UserIDNotFoundException,
+			PasswordNotMatchException, IOException{
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		

@@ -1,5 +1,6 @@
 package entity;
 
+import java.io.BufferedWriter;
 import java.util.Scanner;
 
 public class CGangjwa extends CEntity {
@@ -20,7 +21,7 @@ public class CGangjwa extends CEntity {
 	}
 
 	@Override
-	public void write(Scanner scanner) {
+	public void write(BufferedWriter scanner) {
 		// TODO Auto-generated method stub
 
 	}

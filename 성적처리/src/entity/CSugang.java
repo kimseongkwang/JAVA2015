@@ -1,5 +1,6 @@
 package entity;
 
+import java.io.BufferedWriter;
 import java.util.Scanner;
 
 public class CSugang extends CEntity {
@@ -17,16 +18,14 @@ public class CSugang extends CEntity {
 		this.userID = userID;
 		this.gangjwaID = gangjwaID;
 	}
-
 	@Override
 	public void read(Scanner scanner) {
 		// TODO Auto-generated method stub
 		userID = scanner.next();
 		gangjwaID = scanner.next();				
 	}
-
 	@Override
-	public void write(Scanner scanner) {
+	public void write(BufferedWriter scanner) {
 		// TODO Auto-generated method stub
 		
 	}

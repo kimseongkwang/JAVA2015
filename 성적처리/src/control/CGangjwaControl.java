@@ -1,6 +1,7 @@
 package control;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Vector;
 
 import entity.CGangjwa;
@@ -8,11 +9,11 @@ import entity.CSugang;
 
 public class CGangjwaControl extends CControl{
 
-	public Vector<CGangjwa> getGangjwaList() throws FileNotFoundException {
+	public Vector<CGangjwa> getGangjwaList() throws IOException {
 		// TODO Auto-generated method stub
 		//real entity list
 		Vector<CGangjwa> gangjwaList = new Vector<CGangjwa>();
-		this.getDao().connect("gangjwa.txt");
+		this.getDao().connect("gangjwa.txt", "r");
 		while(this.getDao().hasNext()){
 			CGangjwa gangjwa = new CGangjwa();
 			gangjwa = (CGangjwa)this.getDao().readNext(gangjwa);

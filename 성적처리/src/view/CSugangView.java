@@ -1,6 +1,7 @@
 package view;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -12,7 +13,7 @@ import entity.VUser;
 
 public class CSugangView extends CView {
 
-	public void sugangSincheong(VUser vUser) throws FileNotFoundException {
+	public void sugangSincheong(VUser vUser) throws IOException {
 		// TODO Auto-generated method stub
 		//show Gangjwa List
 		CGangjwaControl gangjwaControl = (CGangjwaControl)this.getControl();
