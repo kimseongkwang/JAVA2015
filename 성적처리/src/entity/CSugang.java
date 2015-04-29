@@ -1,6 +1,7 @@
 package entity;
 
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class CSugang extends CEntity {
@@ -25,9 +26,12 @@ public class CSugang extends CEntity {
 		gangjwaID = scanner.next();				
 	}
 	@Override
-	public void write(BufferedWriter scanner) {
+	public void write(BufferedWriter bufferWriter) throws IOException {
 		// TODO Auto-generated method stub
-		
+		bufferWriter.write(this.userID);
+		bufferWriter.write(" ");
+		bufferWriter.write(this.gangjwaID);
+		bufferWriter.newLine();
 	}
 
 }

@@ -1,6 +1,8 @@
 package exception;
 
-public class UserIDNotFoundException extends Exception {
+import java.io.IOException;
+
+public class UserIDNotFoundException extends IOException {
 	public UserIDNotFoundException(){
 		super("User ID Not Found Exception");
 	}
