@@ -3,9 +3,9 @@ package control;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import valueObject.VLogin;
+import valueObject.VUser;
 import entity.CUser;
-import entity.VLogin;
-import entity.VUser;
 import exception.PasswordNotMatchException;
 import exception.UserIDNotFoundException;
 

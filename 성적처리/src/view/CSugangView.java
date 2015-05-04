@@ -5,16 +5,20 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
 
+import valueObject.VUser;
 import control.CGangjwaControl;
 import entity.CGangjwa;
 import entity.CSugang;
-import entity.VUser;
 import exception.GangjwaIDMissMatchException;
 
 
 public class CSugangView extends CView {
 
-	public void sugangSincheong(VUser vUser) throws IOException {
+	public CSugangView() {
+		super("수강신청");
+	}
+
+	public void show(VUser vUser) throws IOException {
 		// TODO Auto-generated method stub
 		//show Gangjwa List 강좌 리스트 가져오기
 		CGangjwaControl gangjwaControl = (CGangjwaControl)this.getControl();
